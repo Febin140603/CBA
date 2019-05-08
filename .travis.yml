@@ -9,11 +9,11 @@ language: cpp
        - sudo apt-get install -qq g++-6  
        - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90  
       script:   
-       - g++ febin.cpp -o travis_gcc_cpp17  
+       - g++ febin.cpp -std=c++17 -o travis_gcc_cpp17  
         - ./travis_gcc_cpp17 
-        - g++ AjeetDehal.cpp -o travis_gcc 
+        - g++ AjeetDehal.cpp  -std=c++17 -o travis_gcc 
         - ./travis_gcc
-        - g++ akshay.cpp -o travis_gc 
+        - g++ akshay.cpp -std=c++17 -o travis_gc 
         - ./travis_gc
-        - g++ himm.cpp -o travis_g
+        - g++ himm.cpp -std=c++17 -o travis_g
         - ./travis_g 
